@@ -1,0 +1,24 @@
+.register_wrapper {
+  margin: 0 auto;
+  width: 500px;
+  margin-top: 50px;
+}
+
+.form_group {
+  margin-bottom: 20px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input {
+    border: 0px;
+    height: 40px;
+    background-color: #f6f6f6;
+    width: 100%;
+    outline: none;
+    padding-left: 10px;
+  }
+
+}

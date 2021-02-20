@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "kellton"
+  "defaultProject": "kellton",
+  "cli": {
+    "analytics": false
+  }
 }

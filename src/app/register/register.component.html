@@ -1,0 +1,60 @@
+<div class="register_wrapper">
+
+  <div class="register_form">
+
+    <form [formGroup]="registrationForm" (ngSubmit)="register()">
+
+      <div class="form_group">
+        <label id="firstName">First Name</label>
+        <input formControlName="firstName" type="text" for="firstName" >
+        <div class="alert alert-error" *ngIf="controls.firstName.touched && controls.firstName.errors?.required">
+          FirstName is required
+        </div>
+        <div class="alert alert-error" *ngIf="controls.firstName.touched && controls.firstName.errors?.minlength">
+          Enter Minimum 5 characters
+        </div>
+      </div>
+
+
+      <div class="form_group">
+        <label id="lastName">Last Name</label>
+        <input formControlName="lastName" type="text" for="lastName">
+        <div class="alert alert-error" *ngIf="controls.lastName.touched && controls.lastName.errors?.required">
+          LastName is required
+        </div>
+        <div class="alert alert-error" *ngIf="controls.lastName.touched && controls.lastName.errors?.minlength">
+          Enter Minimum 5 characters
+        </div>
+      </div>
+
+
+      <div class="form_group">
+        <label id="phoneNumber">Phone Number</label>
+        <input formControlName="phoneNumber" type="number" for="phoneNumber">
+        <div class="alert alert-error" *ngIf="controls.phoneNumber.touched && controls.phoneNumber.errors?.required">
+          Phone Number is required
+        </div>
+      </div>
+
+      <div class="form_group">
+        <label id="country">Country</label>
+        <select formControlName="country" for="country">
+          <option value="">Select</option>
+          <option>India</option>
+          <option>USA</option>
+          <option>Srilanka</option>
+        </select>
+        <div class="alert alert-error" *ngIf="controls.country.touched && controls.country.errors?.required">
+          Country is required
+        </div>
+      </div>
+
+      <div class="form_group">
+        <button type="submit">Submit</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
