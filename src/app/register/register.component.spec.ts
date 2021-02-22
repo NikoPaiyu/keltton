@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { anagram } from '../anagramTester/anagram';
 
 import { RegisterComponent } from './register.component';
 
@@ -51,5 +52,15 @@ describe('RegisterComponent', () => {
     expect(component.registrationForm.valid).toBeTruthy();
 
   })
+
+  it('Anagram Tester - True' , () => {
+    expect(anagram('cellar','recall')).toBeTruthy();
+  })
+
+  it('Anagram Tester - False' , () => {
+    expect(anagram('nikhil','recall')).toBeFalsy();
+  })
+
+
 
 });
