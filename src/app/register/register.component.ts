@@ -55,8 +55,6 @@ export class RegisterComponent implements OnInit {
     return this.registrationForm.controls;
   }
 
-
-
   register(){
     console.log(this.registrationForm);
   }
